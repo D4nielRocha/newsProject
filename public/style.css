@@ -1,0 +1,93 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* background-color: white; */
+    font-family: 'Times New Roman', Times, serif;
+    /* padding: 1rem 2rem; */
+    /* font-size: 1rem; */
+    /* margin: 0; */
+    /* color: #444; */
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.0rem;
+}
+
+p{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+form{
+    margin-top: 5rem;
+}
+
+article{
+    /* background-color: rgb(217, 232, 245); */
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+
+article h4{
+    color: red;
+}
+
+article img{
+    width: 500px;
+    height: 350px;
+}
+
+
+.carousel-item{ 
+    /* background-color: lightcoral; */
+    height: 60vh;
+    background: black;
+    color: white;
+    /* position: relative; */
+}
+
+.container1, .container2, .container3{
+    /* background-color: lightcoral; */
+    /* font-size: 1rem; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* right: 0; */
+    padding-bottom: 50px;
+    /* width: 60vw; */
+}
+
+.container a{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    /* border-radius: 10px; */
+}
+
+.container h1{
+    margin-bottom: 1.5rem;
+    width: 80vw;
+}
+
+.container p{
+    /* background-color: lightcoral; */
+    width: 80vw;
+}
+
+.img__overlay1, .img__overlay2, .img__overlay3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background-clip: border-box; */
+    opacity: 0.5;
+}
+
+
+
