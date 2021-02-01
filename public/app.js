@@ -62,18 +62,40 @@ const textTarget = document.querySelector('#inputText');
                 $(`.container${i}`).append(`<a href="#" class="button is-primary is-rounded">Read More</a>`);
             }
 
-            //create article html 
-            const output = articles.map( article => {          
-                return `<article>
-                            <h4>${article.title}</h4>
-                            <p>${article.author}</p>
-                            <p>${article.publishedAt}</p>
-                            <img src=${article.urlToImage} alt='article image'>
-                            <p>${article.description}</p>
-                            <p><a href='${article.url}' target='_blank</a>Read More</p>
-                        </article>`
-            });
-            document.getElementById('articles').innerHTML = output.join('');
+            // //create article html 
+            // const output = articles.map( article => {          
+            //     return `<div class="card" style="width: 18rem;">
+            //                 <img class="card-img-top" src=${article.urlToImage} alt='article image'>
+            //                 <div class="card-body">
+            //                     <h4 class="card-title">${article.title}</h4>
+            //                     <p class="card-text">${article.author}</p>
+            //                     <p class="card-text">${article.publishedAt}</p>
+            //                     <p class="card-text">${article.description}</p>
+            //                     <a class="btn btn-primary" href='${article.url}' target='_blank>Read More</a>
+            //                 </div>
+            //             </div>`
+            // });
+            // document.getElementById('articles').innerHTML = output.join('');
+
+            for(let article of articles){
+                const el = document.createElement('div');
+                el.classList.add('row');
+                el.innerHTML = `
+                                    
+                                        <div class="card">     
+                                            <div class="card-body">
+                                                <img class="card-img-top" src=${article.urlToImage} alt='article image'>
+                                                <h4 class="card-title">${article.title}</h4>
+                                                <p class="card-text">${article.author}</p>
+                                                <a class="btn btn-primary" href='${article.url}' target='_blank'>Read More</a>
+                                            </div>
+                                        </div>
+                                    `;
+                                    
+                document.getElementById('articles').appendChild(el);
+            }
+
+
 
         }        
     }
